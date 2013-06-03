@@ -89,33 +89,12 @@ go
 INSERT INTO FSDemo(ID, name, jpg) 
 Values (NEWID()
       , 'uma.jpg'
-      , (SELECT * FROM OPENROWSET(BULK N'C:\Users\Steve\Documents\SampleData\Uma.jpg', SINGLE_BLOB) AS CategoryImage)
+      , (SELECT * FROM OPENROWSET(BULK N'C:\Users\sjones\Documents\SampleData\Uma.jpg', SINGLE_BLOB) AS CategoryImage)
 	  );
 go
 
 SELECT *
  FROM FSDemo
-;
-
-
-
-declare @list XML
-select @list = '
-<Lists>
-  <Groceries Store=''Safeway''>
-    <Item>Milk</Item>
-	<Item>Eggs</Item>
-	<Item>Bread</Item>
-  </Groceries>
-  <Drinks Store=''Tipsys''>
-	<Drink>Fat Tire</Drink>
-	<Drink>Klinker Brick Cabernet</Drink>
-	<Drink>Patron</Drink>
-  </Drinks>
-  <Ranch>
-    <Item>electric fence ribbon</Item>
-  </Ranch>
-</Lists>'
 ;
 
 

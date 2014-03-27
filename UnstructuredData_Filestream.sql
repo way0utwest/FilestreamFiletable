@@ -89,7 +89,7 @@ go
 INSERT INTO FSDemo(ID, name, jpg) 
 Values (NEWID()
       , 'uma.jpg'
-      , (SELECT * FROM OPENROWSET(BULK N'C:\Users\sjones\Documents\SampleData\Uma.jpg', SINGLE_BLOB) AS CategoryImage)
+      , (SELECT * FROM OPENROWSET(BULK N'C:\Users\sjones\Documents\Samples\Uma.jpg', SINGLE_BLOB) AS CategoryImage)
 	  );
 go
 

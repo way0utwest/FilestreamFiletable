@@ -1,7 +1,7 @@
-$server = "dkrSQL2012"
+$server = "BuilderBob\SQL2014"
 $database = "AdventureWorks2008"
 $query = "SELECT jpg, name FROM FSDemo"
-$dirPath = "C:\Users\Steve\Documents\Docs\"
+$dirPath = "C:\Users\sjones\Documents\Docs\"
  
 $connection=new-object System.Data.SqlClient.SQLConnection
 $connection.ConnectionString="Server={0};Database={1};Integrated Security=True" -f $server,$database
